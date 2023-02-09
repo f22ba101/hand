@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン画面</title>
+    <script>
+        function rog() {
+            //　パスワードの受け取り
+            let inputpass = document.getElementById("num").value;
+            //　IDの受け取り 
+            let inputId = document.getElementById("num2").value;
+            if (inputpass == '101ab22f' && inputId == "f22ba101") {
+                window.open("game.html");
+            }
+            //　入力が正しくない場合
+            else {
+                alert("IDかパスワードが違います。もう一度入力してください。");
+            }
+
+        }
+    </script>
+    <style>
+        span {
+            color: aliceblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: linear-gradient(transparent 70%, #a7d6ff 70%);
+        }
+
+        body {
+            background-color: black;
+        }
+
+        p {
+            color: aliceblue;
+            font-style: italic;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        #num {
+            width: 280px;
+            background-color: #f0f8ff;
+            height: 25px;
+            border-radius: 10px;
+        }
+
+        #button {
+            border-radius: 25px;
+            background-color: pink;
+            outline: none;
+        }
+
+        #num2 {
+            width: 280px;
+            background-color: #f0f8ff;
+            height: 25px;
+            border-radius: 10px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center"><span>ログイン</span></h1>
+    <div>
+        <p>IDとパスワードを入力して、Loginボタンを押してください。</p>
+        <input id="num2" type="text" placeholder="ID"><br>
+        <br>
+        <input id="num" type="password" placeholder="Password"><br>
+        <br><input id="button" type="button" value="Login" onclick="rog()">
+    </div>
+
+
+</body>
+
+</html>
